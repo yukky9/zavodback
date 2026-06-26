@@ -1,6 +1,7 @@
 fastapi
-uvicorn
+uvicorn[standard]
+python-dotenv
 python-multipart
 pdfplumber
 pandas
-openpyxl   # если понадобится
+openpyxl

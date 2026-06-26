@@ -1,7 +1,11 @@
 import sqlite3
 import os
 
-DB_PATH = os.path.join(os.path.dirname(__file__), "..", "db.sqlite3")
+DB_PATH = os.getenv(
+    "DB_PATH",
+    os.path.join(os.path.dirname(__file__), "..", "db.sqlite3"),
+)
+
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
